@@ -8,11 +8,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#F4F9FF",
+        secondary: "white",
+        accent: "#2639ED",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      spacing: {
+        "128": "32rem",
+        "144": "36rem",
+      },
+      borderRadius: {
+        "4xl": "2rem",
+      },
+    },
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
+    fontFamily: {
+      sans: ["Graphik", "sans-serif"],
+      serif: ["Merriweather", "serif"],
     },
   },
   plugins: [],
