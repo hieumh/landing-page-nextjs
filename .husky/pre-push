@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+. "${0%/*}/h"
+
+# Read input arguments
+$args = $null
+$args = $input | Out-String
+
+# Split input into an array of lines
+$lines = $args -split "`n"
+
+# Iterate over each line
+foreach ($line in $lines) {
+    # Extract local and remote references
+    $localRef, $localSha, $remoteRef, $remoteSha = $line.Trim() -split '\s+'
+    
+    # Get the branch names
+    $branch = git rev-parse --symbolic --abbrev-ref $localRef
+    $remote = git rev-parse --symbolic --abbrev-ref $remoteRef
+    
+    # List of branches that are not allowed to be pushed to
+    $disallowedBranches = @("master", "develop", "test", "uat")
+
+    # Check if the branch being pushed is disallowed
+    foreach ($disallowedBranch in $disallowedBranches) {
+        if ($branch -eq $disallowedBranch) {
+            Write-Output "Push to branch $branch is not allowed."
+            exit 1
+        }
+    }
+}
+
+exit 0
