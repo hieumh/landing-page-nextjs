@@ -91,6 +91,11 @@
         ],
         "pathGroups": [
           {
+            "pattern": "next**",
+            "group": "external",
+            "position": "before"
+          },
+          {
             "pattern": "react**",
             "group": "external",
             "position": "before"

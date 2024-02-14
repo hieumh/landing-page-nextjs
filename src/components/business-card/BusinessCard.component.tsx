@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { FC } from "react";
+import Image from "next/image";
 
 interface IBusinessCardProps {
   src: string;
@@ -22,7 +22,7 @@ const BusinessCard: FC<IBusinessCardProps> = ({
   return (
     <div className="flex h-96 w-72 flex-col items-center justify-center gap-7 rounded-2xl bg-white p-8 shadow-2xl">
       <div
-        className="flex h-28 w-28 justify-center rounded-[20px]"
+        className="flex h-28 w-28 justify-center rounded-[1.25rem]"
         style={{
           backgroundColor: colorTheme || "white",
         }}

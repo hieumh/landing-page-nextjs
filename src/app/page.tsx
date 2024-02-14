@@ -1,10 +1,10 @@
+import { FC } from "react";
 import BusinessCard from "@/components/business-card/BusinessCard.component";
 import InspirePeople from "@/components/inspire/InspirePeople.component";
 import NewsLetter from "@/components/new-letters/NewsLetter.component";
 import { businessFeatures } from "@/constants/common.constants";
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
 
 interface HomePage {}
 
@@ -23,7 +23,7 @@ const HomePage: FC<HomePage> = () => {
           </p>
 
           <div>
-            <button className="bg-accent hover:text-accent hover:outline-accent] mt-8 rounded-full px-10 py-5 font-bold text-white shadow-2xl hover:bg-white hover:outline hover:outline-2">
+            <button className="hover:outline-accent] mt-8 rounded-full bg-accent px-10 py-5 font-bold text-white shadow-2xl hover:bg-white hover:text-accent hover:outline hover:outline-2">
               Contact Now
             </button>
 
