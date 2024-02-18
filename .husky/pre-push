@@ -1,6 +1,3 @@
-#!/usr/bin/env sh
-. "${0%/*}/h"
-
 # Read input arguments
 $args = $null
 $args = $input | Out-String

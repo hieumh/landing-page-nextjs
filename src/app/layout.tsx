@@ -38,7 +38,6 @@ const RootLayout = ({
           </ul>
         </div>
 
-        {/* content */}
         <div className="mt-10">{children}</div>
       </body>
     </html>
